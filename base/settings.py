@@ -31,12 +31,13 @@ SECRET_KEY = 'django-insecure-g0haooef^u26@nd04r+)$2^sbgj=066xt@@nz1qbb^!3ckx!52
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://portfolio-website-1.herokuapp.com/',
-                 'https://bensalcos.dev',
-                 'https://portfolio-1-820e8c16bdd1.herokuapp.com/',
-                 'www.bensalcos.dev,',
-                 'bensalcos.dev,'
-                 ]
+ALLOWED_HOSTS = [
+    'portfolio-website-1.herokuapp.com',
+    'bensalcos.dev',
+    'portfolio-1-820e8c16bdd1.herokuapp.com',
+    'www.bensalcos.dev',
+    'bensalcos.dev',
+]
 
 
 # Application definition
@@ -52,17 +53,13 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoise'
-]
-
-WHITENOISE_MIDDLEWARE = [
+    'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
