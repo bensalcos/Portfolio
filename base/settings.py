@@ -55,6 +55,10 @@ MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoise'
 ]
 
+WHITENOISE_MIDDLEWARE = [
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+]
+
 ROOT_URLCONF = 'base.urls'
 
 TEMPLATES = [
@@ -128,6 +132,7 @@ STATICFILES_DIRS = [
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+WHITENOISE_STATIC_PREFIX = '/static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
