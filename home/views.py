@@ -6,3 +6,5 @@ from  datetime import datetime
 def home(request):
     return render(request, 'home/welcome.html', {'today':datetime.today()})
 
+def index(request):
+    return render(request, 'index.html', {'today':datetime.today()})
